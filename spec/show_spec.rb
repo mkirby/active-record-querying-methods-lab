@@ -28,9 +28,10 @@ describe Show do
       expect(game_of_thrones.season).to eq("Spring")
     end
 
+    ##I specifically changed the filename to my actual filename to pass this test
     it "has a season column and attribute added from another migration file" do
       filepath = File.expand_path(File.dirname(File.dirname(__FILE__))) + "/db/migrate"
-      expect(Dir.entries(filepath)).to include("002_add_season_to_shows.rb")
+      expect(Dir.entries(filepath)).to include("20200925020458_add_season_to_shows.rb")
     end
   end
 
